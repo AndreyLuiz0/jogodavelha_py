@@ -34,9 +34,9 @@ class JogoDaVelha:
 
     def verificar_vitoria(self, jogador):
         for i in range(3):
-            if all(self.tabuleiro[i][j] == jogador for j in range(3)) or                all(self.tabuleiro[j][i] == jogador for j in range(3)):
+            if all(self.tabuleiro[i][j] == jogador for j in range(3)) or all(self.tabuleiro[j][i] == jogador for j in range(3)):
                 return True
-        if all(self.tabuleiro[i][i] == jogador for i in range(3)) or            all(self.tabuleiro[i][2 - i] == jogador for i in range(3)):
+        if all(self.tabuleiro[i][i] == jogador for i in range(3)) or all(self.tabuleiro[i][2 - i] == jogador for i in range(3)):
             return True
         return False
 
